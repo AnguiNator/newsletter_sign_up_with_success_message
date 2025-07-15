@@ -1,0 +1,170 @@
+@use 'base/base';
+@use 'base/utils' as *;
+@use 'components/buttons';
+@use 'pages/success';
+
+
+body {
+    @include tablet() {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: $color-blue-800;
+    }
+}
+
+.container {
+    min-width: 37.5rem;
+    background-color: white;
+    @include flexbox(column, $space-40);
+
+    @include tablet() {
+        width: 60.8rem;
+        border-radius: 3.6rem;
+        padding: $space-40;
+    }
+
+    @include desktop() {
+        width: fit-content;
+        @include flexbox(row, $space-64);
+        padding: $space-32;
+        justify-content: center;
+    }
+
+    &__img {
+        width: 37.5rem;
+        height: 28.4rem;
+        overflow: hidden;
+        border-radius: 0 0 $space-16 $space-16;
+        background: $color-gradient;
+        align-self: center;
+
+
+        @include tablet() {
+            width: 52.8rem;
+            height: 35.8rem;
+            border-radius: $space-16;
+        }
+
+        @include desktop() {
+            width: 40rem;
+            height: 59.3rem;
+            order: 1;
+        }
+
+        img {
+            width: 42.7rem;
+            height: 20.8rem;
+            transform: translate(-3.5rem, 3.4rem);
+
+            @include tablet {
+                width: 61.8rem;
+                height: 30.8rem;
+                transform: translate(-4.5rem, 2.6rem);
+            }
+
+            @include desktop {
+                width: 75.4rem;
+                height: 40.7rem;
+                transform: translate(-17.7rem, 9.3rem);
+            }
+        }
+    }
+
+    &__info {
+        width: 32.7rem;
+        @include flexbox(column, $space-40);
+        align-self: center;
+        @include text-preset-2-regular();
+
+        @include tablet() {
+            width: 100%;
+            gap: $space-24;
+        }
+
+        @include desktop() {
+            width: 37.6rem;
+            height: 45rem;
+        }
+    }
+
+    &__update {
+        @include flexbox(column, $space-24);
+        color: $color-blue-800;
+
+        h1 {
+            @include text-preset-1-mobil();
+
+            @include tablet() {
+                @include text-preset-1();
+            }
+
+        }
+    }
+
+    &__benefits {
+        list-style-type: none;
+        @include flexbox(column, $space-8);
+
+        li {
+            display: flex;
+            gap: 1.6rem;
+        }
+
+        li::before {
+            content: '';
+            display: inline-block;
+            width: 2.3rem;
+            height: 2.3rem;
+            background-image: url('../assets/check.png');
+            background-repeat: no-repeat;
+        }
+    }
+
+
+
+    .form__info {
+        @include flexbox(column, $space-24);
+
+        @include tablet() {
+            gap: $space-16;
+        }
+    }
+
+    .form__email {
+        @include flexbox(column, $space-8);
+
+        .form__label {
+            display: flex;
+            justify-content: space-between;
+            @include text-preset-3();
+            color: $color-blue-800;
+        }
+
+        .has_error {
+            color: $color-red;
+        }
+
+        .invisible {
+            display: none;
+        }
+
+
+        .form__email--active {
+            @include text-preset-2-regular();
+            height: 5.6rem;
+            padding: $space-16 $space-24;
+            border-radius: $space-8;
+            border: solid 0.1rem $color-grey;
+            outline: none;
+        }
+
+        .error {
+            color: $color-red;
+            border: solid 0.1rem $color-red;
+            background-color: #fde7e6;
+        }
+    }
+
+}

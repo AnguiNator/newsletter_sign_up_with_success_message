@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter sing up with success message</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main class="container">
+        <div class="container__img">
+            <img src="./assets/Image Container.png" alt="Laptop con gráfico de estadísticas">
+        </div>
+        <section class="container__info">
+            <div class="container__update">
+                <h1>Stay updated!</h1>
+                <p>Join 60,000+ product managers receiving monthly updates on:</p>
+                <ul class="container__benefits">
+                    <li>
+                        Product discovery and
+                        building what
+                        matters
+                    </li>
+                    <li>
+                        Measuring to ensure updates
+                        are a success
+                    </li>
+                    <li>
+                        And much more!
+                    </li>
+                </ul>
+            </div>
+            <form id="form" novalidate>
+                <div class="form__info">
+                    <div class="form__email">
+                        <div class="form__label">
+                            <label for="inputMail">Email address</label>
+                            <span id="error-message" class="invisible has_error">Valid email
+                                required</span>
+                        </div>
+                        <input id="inputMail" aria-describedby="error-message" class="form__email--active" name="email"
+                            type="email" placeholder="email@company.com" required>
+                    </div>
+                    <button id="button" type="submit" class="form__button">Subscribe to monthly newsletter</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

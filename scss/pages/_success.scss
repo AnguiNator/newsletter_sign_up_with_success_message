@@ -1,0 +1,49 @@
+@use '../base/utils' as *;
+@use '../components/buttons';
+
+
+.container__tanks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container__main {
+    background-color: white;
+    width: 32.7rem;
+    height: 62.3rem;
+    @include flexbox(column, 0);
+    justify-content: space-around;
+
+    @include tablet() {
+        width: 50.4rem;
+        height: 52rem;
+        padding: $space-64;
+        gap: $space-32;
+        border-radius: 3.6rem;
+    }
+
+    .container__title {
+        @include flexbox(column, $space-32);
+        @include text-preset-2-regular();
+    }
+
+    img {
+        width: $space-64;
+        height: $space-64;
+    }
+
+    h1 {
+        @include text-preset-1-mobil();
+        color: $color-blue-800;
+    }
+
+    .container__button {
+        width: 100%;
+
+        .form__button {
+            padding: 0;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+@use 'variables' as *;
+
+@mixin text-preset-1() {
+    font-size: $font-size-56;
+    line-height: $line-height-100;
+    letter-spacing: $letter-spacing-0;
+    font-weight: $font-weight-bold;
+}
+
+@mixin text-preset-1-mobil() {
+    font-size: $font-size-40;
+    line-height: $line-height-100;
+    letter-spacing: $letter-spacing-0;
+    font-weight: $font-weight-bold;
+}
+
+@mixin text-preset-2-bold() {
+    font-size: $font-size-16;
+    line-height: $line-height-150;
+    letter-spacing: $letter-spacing-0;
+    font-weight: $font-weight-bold;
+}
+
+@mixin text-preset-2-regular() {
+    font-size: $font-size-16;
+    line-height: $line-height-150;
+    letter-spacing: $letter-spacing-0;
+    font-weight: $font-weight-regular;
+}
+
+@mixin text-preset-3() {
+    font-size: $font-size-12;
+    line-height: $line-height-150;
+    letter-spacing: $letter-spacing-0;
+    font-weight: $font-weight-bold;
+}
+
+@mixin tablet {
+    @media screen and (min-width: 48em) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 64em) {
+        @content;
+    }
+}
+
+@mixin flexbox($direction, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap;
+}
